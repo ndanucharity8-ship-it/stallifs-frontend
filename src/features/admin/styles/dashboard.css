@@ -1,0 +1,909 @@
+/* ===================================================
+   STALLIFS INSURANCE
+   CUSTOMER & ADMIN DASHBOARD DESIGN SYSTEM
+=================================================== */
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===================================================
+   HERO
+=================================================== */
+
+.dashboard-hero {
+  background: linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%);
+  color: #fff;
+  border-radius: 22px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.dashboard-hero h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.dashboard-hero p {
+  margin-top: 15px;
+  max-width: 650px;
+  line-height: 1.7;
+  opacity: .95;
+}
+
+.hero-button {
+  background: white;
+  color: #0F4C81;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+/* ===========================
+   ADMIN HERO
+=========================== */
+
+.admin-hero{
+background:#fff;
+border-radius:18px;
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.admin-hero-left{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.admin-avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+background:#0F4C81;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+font-weight:700;
+}
+
+.admin-hero-left h1{
+margin:0;
+font-size:32px;
+color:#1F2937;
+}
+
+.admin-hero-left p{
+margin-top:8px;
+color:#6B7280;
+}
+
+.admin-hero-right{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.admin-date-card,
+.admin-status-card{
+background:#F8FAFC;
+padding:18px;
+border-radius:12px;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.online-dot{
+width:14px;
+height:14px;
+background:#2E7D32;
+border-radius:50%;
+}
+
+.admin-search input{
+width:100%;
+padding:15px;
+border-radius:10px;
+border:1px solid #E5E7EB;
+font-size:15px;
+}
+
+.admin-summary-row{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.summary-item{
+background:#F8FAFC;
+padding:20px;
+border-radius:14px;
+text-align:center;
+}
+
+.summary-item small{
+display:block;
+margin-bottom:8px;
+color:#6B7280;
+}
+
+.summary-item h2{
+margin:0;
+color:#0F4C81;
+font-size:28px;
+font-weight:700;
+}
+
+/* ===================================================
+   KPI GRID
+=================================================== */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 24px;
+}
+/* ===========================
+ADMIN KPI CARDS
+=========================== */
+
+.admin-stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
+margin:30px 0;
+}
+
+.admin-stat-card{
+background:#fff;
+border-radius:18px;
+padding:24px;
+display:flex;
+align-items:center;
+gap:18px;
+box-shadow:0 8px 24px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
+}
+
+.admin-stat-card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.admin-stat-icon{
+width:70px;
+height:70px;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+color:white;
+flex-shrink:0;
+}
+
+.admin-stat-body{
+flex:1;
+}
+
+.admin-stat-body h4{
+margin:0;
+font-size:15px;
+font-weight:600;
+color:#6B7280;
+}
+
+.admin-stat-body h2{
+margin:8px 0;
+font-size:32px;
+font-weight:700;
+color:#1F2937;
+}
+
+.admin-stat-trend{
+display:inline-block;
+margin-top:6px;
+font-size:13px;
+font-weight:600;
+color:#2E7D32;
+}
+
+/* ===================================================
+   SECTION CARD
+=================================================== */
+
+.dashboard-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+.dashboard-card h2 {
+  margin: 0 0 20px;
+  font-size: 21px;
+  color: #1F2937;
+}
+
+/* ===================================================
+   TWO COLUMN
+=================================================== */
+
+.dashboard-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* ===================================================
+   THREE COLUMN
+=================================================== */
+
+.dashboard-three-column {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+/* ===================================================
+   QUICK ACTIONS
+=================================================== */
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 18px;
+}
+
+.quick-card {
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: .25s;
+  background: white;
+}
+
+.quick-card:hover {
+  background: #F5F7FA;
+  transform: translateY(-4px);
+}
+
+.quick-card h3 {
+  margin: 12px 0;
+}
+
+.quick-icon {
+  font-size: 38px;
+}
+
+/* ===================================================
+   PROFILE
+=================================================== */
+
+.profile-header {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #0F4C81;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.profile-info h3 {
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #6B7280;
+}
+
+.profile-list {
+  margin-top: 20px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+/* ===================================================
+   AI SUMMARY
+=================================================== */
+
+.ai-score {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0F4C81;
+}
+
+.ai-risk {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 50px;
+  margin-top: 12px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.low-risk {
+  background: #2E7D32;
+}
+
+.medium-risk {
+  background: #F9A825;
+}
+
+.high-risk {
+  background: #D32F2F;
+}
+
+.ai-list {
+  margin-top: 20px;
+}
+
+.ai-list li {
+  margin-bottom: 10px;
+}
+
+/* ===================================================
+   TABLES
+=================================================== */
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th {
+  text-align: left;
+  background: #F7F9FB;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.dashboard-table td {
+  padding: 14px;
+  border-top: 1px solid #EEEEEE;
+}
+
+.dashboard-table tr:hover {
+  background: #FAFAFA;
+}
+
+/* ===================================================
+   STATUS BADGES
+=================================================== */
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-approved {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.badge-pending {
+  background: #FFF8E1;
+  color: #F9A825;
+}
+
+.badge-rejected {
+  background: #FDECEA;
+  color: #D32F2F;
+}
+
+.badge-escalated {
+  background: #F3E5F5;
+  color: #7B1FA2;
+}
+
+/* ===================================================
+   REMINDERS
+=================================================== */
+
+.reminder-item {
+  border-left: 4px solid #0F4C81;
+  padding: 14px;
+  margin-bottom: 15px;
+  background: #F8FAFC;
+}
+
+/* ===================================================
+   NOTIFICATIONS
+=================================================== */
+
+.notification-item {
+  padding: 15px;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-title {
+  font-weight: 600;
+}
+
+.notification-message {
+  color: #6B7280;
+  margin-top: 6px;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media (max-width:1024px) {
+
+  .dashboard-two-column,
+  .dashboard-three-column {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .dashboard-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .dashboard-card {
+    padding: 18px;
+  }
+
+}
+/* ===========================
+RECHARTS
+=========================== */
+
+.chart-card{
+
+background:#fff;
+
+border-radius:18px;
+
+padding:25px;
+
+margin-top:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.chart-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+}
+
+.chart-header h2{
+
+margin:0;
+
+font-size:24px;
+
+color:#1F2937;
+
+}
+
+.chart-header p{
+
+margin-top:5px;
+
+color:#6B7280;
+
+}
+/* ===========================
+AI INSIGHTS
+=========================== */
+
+.dashboard-section-title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.dashboard-section-title h2{
+margin:0;
+font-size:24px;
+color:#1F2937;
+}
+
+.dashboard-section-title span{
+font-size:13px;
+font-weight:600;
+color:#0F4C81;
+}
+
+.insight-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.insight-card{
+display:flex;
+align-items:flex-start;
+gap:18px;
+padding:18px;
+border-radius:14px;
+border-left:6px solid transparent;
+background:#F8FAFC;
+transition:.3s;
+}
+
+.insight-card:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.insight-icon{
+font-size:28px;
+width:45px;
+display:flex;
+justify-content:center;
+}
+
+.insight-content{
+flex:1;
+}
+
+.insight-content h4{
+margin:0 0 8px;
+font-size:17px;
+color:#1F2937;
+}
+
+.insight-content p{
+margin:0;
+color:#6B7280;
+line-height:1.5;
+}
+
+.insight-success{
+border-left-color:#2E7D32;
+}
+
+.insight-warning{
+border-left-color:#F9A825;
+}
+
+.insight-danger{
+border-left-color:#D32F2F;
+}
+
+.insight-info{
+border-left-color:#1976D2;
+}
+/* ===========================
+SYSTEM HEALTH
+=========================== */
+
+.health-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
+}
+
+.health-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px;
+border-radius:14px;
+background:#F8FAFC;
+transition:.3s;
+}
+
+.health-card:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.health-left{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:600;
+color:#1F2937;
+}
+
+.health-dot{
+width:14px;
+height:14px;
+border-radius:50%;
+}
+
+.health-online{
+background:#2E7D32;
+color:#2E7D32;
+}
+
+.health-warning{
+background:#F9A825;
+color:#F9A825;
+}
+
+.health-offline{
+background:#D32F2F;
+color:#D32F2F;
+}
+/* ===========================
+RECENT ACTIVITY
+=========================== */
+
+.activity-list{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.activity-card{
+display:flex;
+align-items:center;
+gap:18px;
+padding:18px;
+background:#F8FAFC;
+border-radius:14px;
+transition:.3s;
+}
+
+.activity-card:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.activity-icon{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#E3F2FD;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+flex-shrink:0;
+}
+
+.activity-content{
+flex:1;
+}
+
+.activity-content strong{
+display:block;
+margin-bottom:4px;
+color:#1F2937;
+}
+
+.activity-content p{
+margin:0;
+color:#6B7280;
+font-size:14px;
+}
+
+.activity-time{
+font-size:12px;
+color:#9CA3AF;
+white-space:nowrap;
+}
+
+/* ===========================
+QUICK ACTIONS
+=========================== */
+
+.quick-actions-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.quick-action-card{
+background:#F8FAFC;
+border-radius:18px;
+padding:24px;
+cursor:pointer;
+transition:.3s;
+text-align:center;
+border:1px solid #E5E7EB;
+}
+
+.quick-action-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,.10);
+border-color:#0F4C81;
+}
+
+.quick-action-icon{
+width:70px;
+height:70px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0 auto 18px;
+font-size:32px;
+color:#fff;
+}
+
+.quick-action-card h3{
+margin:0 0 10px;
+font-size:18px;
+color:#1F2937;
+}
+
+.quick-action-card p{
+margin:0;
+font-size:14px;
+color:#6B7280;
+line-height:1.5;
+}
+/* ===========================
+FRAUD ALERTS
+=========================== */
+
+.fraud-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.fraud-card{
+display:flex;
+gap:18px;
+padding:20px;
+border-radius:16px;
+background:#F8FAFC;
+border-left:6px solid transparent;
+transition:.3s;
+}
+
+.fraud-card:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.fraud-icon{
+font-size:32px;
+width:50px;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+}
+
+.fraud-content{
+flex:1;
+}
+
+.fraud-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+.fraud-header h4{
+margin:0;
+font-size:18px;
+color:#1F2937;
+}
+
+.fraud-content p{
+margin:0;
+color:#6B7280;
+line-height:1.5;
+}
+
+.fraud-badge{
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:700;
+color:white;
+}
+
+.fraud-high{
+border-left-color:#D32F2F;
+}
+
+.fraud-medium{
+border-left-color:#F9A825;
+}
+
+.fraud-low{
+border-left-color:#2E7D32;
+}
+
+.fraud-high.fraud-badge{
+background:#D32F2F;
+}
+
+.fraud-medium.fraud-badge{
+background:#F9A825;
+}
+
+.fraud-low.fraud-badge{
+background:#2E7D32;
+}
+
+.fraud-view-btn{
+background:#0F4C81;
+color:#fff;
+border:none;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.fraud-empty{
+text-align:center;
+padding:40px;
+}
+
+.fraud-empty-icon{
+font-size:50px;
+margin-bottom:15px;
+}

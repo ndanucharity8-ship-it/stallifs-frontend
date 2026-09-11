@@ -1,0 +1,10 @@
+export { default as Navbar } from "./components/Navbar";
+export { default as Hero } from "./components/Hero";
+export { default as Products } from "./components/Products";
+export { default as Features } from "./components/Features";
+export { default as HowItWorks } from "./components/HowItWorks";
+export { default as Stats } from "./components/Stats";
+export { default as Testimonials } from "./components/Testimonials";
+export { default as Contact } from "./components/Contact";
+export { default as CTA } from "./components/CTA";
+export { default as Footer } from "./components/Footer";

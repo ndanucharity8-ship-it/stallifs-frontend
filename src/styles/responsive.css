@@ -1,0 +1,446 @@
+/* ==========================================================
+   STALLIFS INSURANCE
+   RESPONSIVE DESIGN SYSTEM
+========================================================== */
+
+
+/* ==========================================================
+   LARGE DESKTOP
+   ≤ 1400px
+========================================================== */
+
+@media (max-width: 1400px) {
+
+  .container,
+  .page-container {
+    max-width: 1200px;
+  }
+
+}
+
+
+/* ==========================================================
+   DESKTOP
+   ≤ 1200px
+========================================================== */
+
+@media (max-width: 1200px) {
+
+  .container,
+  .page-container {
+    padding-inline: var(--space-6);
+  }
+
+  .layout-content {
+    padding: var(--space-6);
+  }
+
+}
+
+
+/* ==========================================================
+   TABLET LANDSCAPE
+   ≤ 992px
+========================================================== */
+
+@media (max-width: 992px) {
+
+  /* =====================
+     Layout
+  ===================== */
+
+  .layout {
+    display: block;
+  }
+
+  .layout-main {
+    width: 100%;
+  }
+
+  .layout-content {
+    padding: var(--space-5);
+  }
+
+  /* =====================
+     Sidebar
+  ===================== */
+
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    transform: translateX(-100%);
+
+    z-index: var(--z-sidebar);
+
+    transition: transform var(--sidebar-transition);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: var(--overlay-dark);
+
+    z-index: var(--z-overlay);
+  }
+
+  /* =====================
+     Navbar
+  ===================== */
+
+  .navbar-search {
+    max-width: 320px;
+  }
+
+  /* =====================
+     Tables
+  ===================== */
+
+  .table {
+    overflow-x: auto;
+  }
+
+  .table table {
+    min-width: 720px;
+  }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ≤ 768px
+========================================================== */
+
+@media (max-width: 768px) {
+
+  /* =====================
+     Layout
+  ===================== */
+
+  .container,
+  .page-container {
+    padding-inline: var(--space-4);
+  }
+
+  .layout-content {
+    padding: var(--space-4);
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* =====================
+     Navbar
+  ===================== */
+
+  .navbar {
+    padding-inline: var(--space-4);
+  }
+
+  .navbar-search {
+    display: none;
+  }
+
+  .user-meta {
+    display: none;
+  }
+
+  /* =====================
+     Logo
+  ===================== */
+
+  .logo-subtitle {
+    display: none;
+  }
+
+  .logo-name {
+    font-size: var(--font-size-base);
+  }
+
+  /* =====================
+     Cards
+  ===================== */
+
+  .card {
+    padding: var(--space-5);
+  }
+
+  /* =====================
+     Buttons
+  ===================== */
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ≤ 576px
+========================================================== */
+
+@media (max-width: 576px) {
+
+  .container,
+  .page-container {
+    padding-inline: var(--space-3);
+  }
+
+  .layout-content {
+    padding: var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-4);
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ≤ 400px
+========================================================== */
+
+@media (max-width: 400px) {
+
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+/* ==========================================================
+   LANDING NAVBAR
+========================================================== */
+
+@media (max-width: 1100px) {
+  .landing-nav {
+    gap: var(--space-4);
+  }
+
+  .landing-nav-link,
+  .landing-login-link,
+  .landing-agent-link {
+    font-size: var(--font-size-xs);
+  }
+
+  .landing-quote-button {
+    padding-inline: var(--space-4);
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-nav {
+    display: none;
+  }
+
+  .landing-mobile-toggle {
+    display: inline-flex;
+  }
+
+  .landing-mobile-menu {
+    display: block;
+  }
+
+  .landing-logo-image {
+    height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-navbar-inner {
+    min-height: 64px;
+  }
+
+  .landing-logo-image {
+    height: 42px;
+
+    max-width: 150px;
+  }
+}
+/* ==========================================================
+   LANDING HERO
+========================================================== */
+
+@media (max-width: 1100px) {
+  .landing-hero-inner {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+
+    gap: var(--space-8);
+  }
+
+  .landing-hero-title {
+    font-size: clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
+  }
+
+  .landing-hero-image-wrapper {
+    height: 480px;
+  }
+
+  .landing-hero-floating-card {
+    left: -15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-hero-inner {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    gap: var(--space-8);
+
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
+
+  .landing-hero-content {
+    max-width: 700px;
+  }
+
+  .landing-hero-title {
+    max-width: 650px;
+  }
+
+  .landing-hero-description {
+    max-width: 600px;
+  }
+
+  .landing-hero-visual {
+    width: 100%;
+  }
+
+  .landing-hero-image-wrapper {
+    height: 440px;
+
+    border-radius: var(--radius-xl);
+  }
+
+  .landing-hero-floating-card {
+    left: 24px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-hero-inner {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+
+  .landing-hero-title {
+    font-size: clamp(
+      2.6rem,
+      12vw,
+      3.5rem
+    );
+  }
+
+  .landing-hero-description {
+    margin-top: var(--space-5);
+
+    font-size: var(--font-size-base);
+  }
+
+  .landing-hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-top: var(--space-6);
+  }
+
+  .landing-hero-primary,
+  .landing-hero-secondary {
+    width: 100%;
+  }
+
+  .landing-hero-trust {
+    flex-wrap: wrap;
+
+    gap: var(--space-4);
+
+    margin-top: var(--space-8);
+  }
+
+  .landing-hero-divider {
+    display: none;
+  }
+
+  .landing-hero-image-wrapper {
+    height: 360px;
+  }
+
+  .landing-hero-floating-card {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .landing-hero-image-wrapper {
+    height: 320px;
+  }
+
+  .landing-hero-floating-card {
+    padding: var(--space-3);
+  }
+}

@@ -1,0 +1,435 @@
+.settings-page {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: 28px;
+}
+
+.settings-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.settings-header h1 {
+  margin: 0 0 8px;
+
+  color: var(--gray-900);
+
+  font-size: clamp(
+    1.75rem,
+    3vw,
+    2.4rem
+  );
+}
+
+.settings-header p {
+  margin: 0;
+
+  color: var(--gray-600);
+}
+
+.settings-layout {
+  display: grid;
+
+  grid-template-columns: 280px minmax(0, 1fr);
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+.settings-sidebar {
+  position: sticky;
+  top: 24px;
+
+  padding: 12px;
+}
+
+.settings-sidebar-title {
+  padding: 12px 14px 16px;
+
+  color: var(--gray-900);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.settings-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-nav-item {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  background: transparent;
+
+  color: var(--gray-600);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.settings-nav-item:hover {
+  background: var(--gray-100);
+}
+
+.settings-nav-item.active {
+  background: var(--color-primary-light);
+
+  color: var(--color-primary);
+}
+
+.settings-nav-item > span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.settings-nav-item strong {
+  color: inherit;
+
+  font-size: var(--font-size-sm);
+}
+
+.settings-nav-item small {
+  color: var(--gray-500);
+
+  font-size: 11px;
+}
+
+.settings-main {
+  min-width: 0;
+}
+
+.settings-content {
+  width: 100%;
+}
+
+.settings-content > section {
+  margin: 0;
+}
+
+.settings-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-avatar {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--color-primary-light);
+
+  color: var(--color-primary);
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.settings-profile-card h3 {
+  margin: 0 0 4px;
+
+  color: var(--gray-900);
+}
+
+.settings-profile-card p {
+  margin: 0 0 8px;
+
+  color: var(--gray-600);
+}
+
+.settings-role {
+  display: inline-flex;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  background: var(--gray-100);
+
+  color: var(--gray-700);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+}
+
+.settings-password-field {
+  position: relative;
+}
+
+.settings-password-field input {
+  padding-right: 48px;
+}
+
+.settings-password-toggle {
+  position: absolute;
+
+  right: 12px;
+  bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--gray-500);
+
+  cursor: pointer;
+}
+
+.settings-password-toggle:hover {
+  color: var(--gray-900);
+}
+
+.settings-option-list {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid var(--border-color);
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-option strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--gray-900);
+
+  font-size: var(--font-size-sm);
+}
+
+.settings-option p {
+  margin: 0;
+
+  color: var(--gray-500);
+
+  font-size: var(--font-size-sm);
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 24px;
+}
+
+.settings-security-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-bottom: 24px;
+  padding: 16px;
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-success-light);
+}
+
+.settings-status-icon {
+  color: var(--color-success);
+}
+
+.settings-security-status strong {
+  color: var(--gray-900);
+}
+
+.settings-security-status p {
+  margin: 4px 0 0;
+
+  color: var(--gray-600);
+
+  font-size: var(--font-size-sm);
+}
+
+.settings-info-box {
+  margin-top: 24px;
+  padding: 16px;
+
+  border-radius: var(--radius-md);
+
+  background: var(--gray-50);
+}
+
+.settings-info-box strong {
+  color: var(--gray-900);
+}
+
+.settings-info-box p {
+  margin: 8px 0 0;
+
+  color: var(--gray-600);
+
+  font-size: var(--font-size-sm);
+}
+
+.settings-feedback {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+  padding: 14px 16px;
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-size-sm);
+}
+
+.settings-feedback button {
+  margin-left: auto;
+
+  border: none;
+
+  background: transparent;
+
+  color: inherit;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.settings-feedback-success {
+  background: var(--color-success-light);
+
+  color: var(--color-success);
+}
+
+.settings-feedback-error {
+  background: var(--color-danger-light);
+
+  color: var(--color-danger);
+}
+
+.settings-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 400px;
+
+  color: var(--gray-600);
+}
+
+@media (max-width: 900px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    position: static;
+  }
+
+  .settings-sidebar nav {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar nav {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+  }
+
+  .settings-actions {
+    justify-content: stretch;
+  }
+
+  .settings-actions button {
+    width: 100%;
+  }
+}

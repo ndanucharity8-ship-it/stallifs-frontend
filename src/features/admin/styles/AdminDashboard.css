@@ -1,0 +1,51 @@
+/* =====================================
+MASTER DASHBOARD LAYOUT
+===================================== */
+
+.dashboard-container{
+display:flex;
+flex-direction:column;
+gap:28px;
+}
+
+.dashboard-grid-2{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
+gap:24px;
+}
+
+.dashboard-loading{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:70vh;
+}
+
+.loader{
+width:60px;
+height:60px;
+border:6px solid #E5E7EB;
+border-top:6px solid #0F4C81;
+border-radius:50%;
+animation:spin .9s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+@media(max-width:1200px){
+.dashboard-grid-2{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:768px){
+.dashboard-container{
+gap:18px;
+}
+}
