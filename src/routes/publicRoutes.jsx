@@ -44,9 +44,14 @@ const publicRoutes = (
     />
 
 <Route
-      path="/get-quote"
-      element={<GetQuote />}
-    />
+  path="/get-quote"
+  element={<GetQuote />}
+/>
+
+<Route
+  path="/quote"
+  element={<GetQuote />}
+/>
 <Route
   path= "/apply"
   element={<Apply />}
