@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  Link,
+} from "react-router-dom";
 
 import { useAuth } from "../../../hooks/useAuth";
 import {
@@ -9,6 +13,8 @@ import {
 
 export default function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const { login } = useAuth();
 
   const [email, setEmail] =
@@ -37,7 +43,29 @@ export default function Login() {
         return;
       }
 
-      // Redirect by role
+      // --------------------------------------------------
+      // HONOUR REDIRECT AFTER LOGIN
+      // --------------------------------------------------
+
+      const searchParams =
+        new URLSearchParams(
+          location.search
+        );
+
+      const redirect =
+        searchParams.get("redirect");
+
+      if (redirect) {
+        navigate(
+          decodeURIComponent(redirect)
+        );
+        return;
+      }
+
+      // --------------------------------------------------
+      // DEFAULT ROLE REDIRECT
+      // --------------------------------------------------
+
       switch (data.user.role) {
         case "admin":
           navigate("/admin");
