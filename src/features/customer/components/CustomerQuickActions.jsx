@@ -10,7 +10,7 @@ export default function CustomerQuickActions() {
       icon: "📝",
       description: "Get a new insurance quotation",
       color: "#1976D2",
-      route: "/quotes",
+      route: "/products",
     },
     {
       title: "My Applications",

@@ -69,7 +69,7 @@ export default function ProductDetails() {
             <p>{error}</p>
 
             <Link
-              to="/"
+              to="/products"
               className="product-details-back-button"
             >
               <ArrowLeft size={17} />
@@ -88,10 +88,9 @@ export default function ProductDetails() {
   return (
     <main className="product-details-page">
       <div className="landing-container">
-
         {/* Back navigation */}
         <Link
-          to="/"
+          to="/products"
           className="product-details-back-link"
         >
           <ArrowLeft size={17} />
@@ -100,10 +99,8 @@ export default function ProductDetails() {
 
         {/* Main product content */}
         <div className="product-details-layout">
-
           {/* Product introduction */}
           <section className="product-details-intro">
-
             <div className="product-details-category">
               <ShieldCheck size={18} />
               <span>{product.category}</span>
@@ -123,12 +120,10 @@ export default function ProductDetails() {
               Get protection designed to give you
               confidence when it matters most.
             </p>
-
           </section>
 
           {/* Product action card */}
           <aside className="product-details-card">
-
             <div className="product-details-card-icon">
               <ShieldCheck size={28} />
             </div>
@@ -150,12 +145,11 @@ export default function ProductDetails() {
             </p>
 
             <div className="product-details-actions">
-
               <Link
-                to="/register"
+                to={`/quote?product=${product._id}`}
                 className="product-details-primary"
               >
-                Get Started
+                Get a Quote
                 <ArrowRight size={18} />
               </Link>
 
@@ -165,11 +159,8 @@ export default function ProductDetails() {
               >
                 Already have an account?
               </Link>
-
             </div>
-
           </aside>
-
         </div>
       </div>
     </main>
