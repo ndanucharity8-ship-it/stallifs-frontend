@@ -143,7 +143,7 @@ export default function CustomerDashboard() {
         user={user}
         stats={stats}
         onGetQuote={() =>
-          navigate("/quotes")
+          navigate("/products")
         }
       />
 
