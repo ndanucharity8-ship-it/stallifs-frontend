@@ -43,7 +43,7 @@ const publicRoutes = (
     />
 
 <Route
-      path="/quote"
+      path="/get-quote"
       element={<GetQuote />}
     />
   
