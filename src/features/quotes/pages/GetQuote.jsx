@@ -2323,48 +2323,53 @@ export default function GetQuote() {
               </div>
             )}
 
+{/* ACTIONS */}
 
-            {/* ACTIONS */}
+<div className="quote-success-actions">
 
-            <div className="quote-success-actions">
+  <Button
+    size="lg"
+    onClick={handleDownloadQuote}
+    rightIcon={Download}
+  >
+    Download Quote
+  </Button>
 
-              <Button
-                size="lg"
-                onClick={
-                  handleDownloadQuote
-                }
-                rightIcon={
-                  Download
-                }
-              >
-                Download Quote
-              </Button>
+  <Link
+    to={`/apply?quote=${quote._id}&product=${
+      quote.product?._id ||
+      selectedProduct?._id ||
+      form.product
+    }`}
+  >
+    <Button
+      variant="primary"
+      size="lg"
+      rightIcon={ArrowRight}
+    >
+      Apply for This Insurance
+    </Button>
+  </Link>
 
+  <Link to="/register">
+    <Button
+      variant="secondary"
+      size="lg"
+    >
+      Create Account
+    </Button>
+  </Link>
 
-              <Link to="/register">
+  <Link to="/">
+    <Button
+      variant="ghost"
+      size="lg"
+    >
+      Back to Home
+    </Button>
+  </Link>
 
-                <Button
-                  variant="secondary"
-                  size="lg"
-                >
-                  Create Account
-                </Button>
-
-              </Link>
-
-
-              <Link to="/">
-
-                <Button
-                  variant="ghost"
-                  size="lg"
-                >
-                  Back to Home
-                </Button>
-
-              </Link>
-
-            </div>
+</div>
 
 
             {/* SAVE NOTE */}

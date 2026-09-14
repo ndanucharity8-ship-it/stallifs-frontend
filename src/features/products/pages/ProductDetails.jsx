@@ -7,6 +7,9 @@ import {
 } from "lucide-react";
 
 import api from "../../../shared/api/axios";
+import {
+  getQuoteRoute,
+} from "../../insuranceWorkflow";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -88,7 +91,6 @@ export default function ProductDetails() {
   return (
     <main className="product-details-page">
       <div className="landing-container">
-        {/* Back navigation */}
         <Link
           to="/products"
           className="product-details-back-link"
@@ -97,9 +99,7 @@ export default function ProductDetails() {
           Back to Products
         </Link>
 
-        {/* Main product content */}
         <div className="product-details-layout">
-          {/* Product introduction */}
           <section className="product-details-intro">
             <div className="product-details-category">
               <ShieldCheck size={18} />
@@ -122,7 +122,6 @@ export default function ProductDetails() {
             </p>
           </section>
 
-          {/* Product action card */}
           <aside className="product-details-card">
             <div className="product-details-card-icon">
               <ShieldCheck size={28} />
@@ -146,7 +145,9 @@ export default function ProductDetails() {
 
             <div className="product-details-actions">
               <Link
-                to={`/quote?product=${product._id}`}
+                to={getQuoteRoute({
+                  productId: product._id,
+                })}
                 className="product-details-primary"
               >
                 Get a Quote

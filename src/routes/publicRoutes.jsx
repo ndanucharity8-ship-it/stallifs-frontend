@@ -9,6 +9,7 @@ import About from "../features/about/pages/About";
 import GetQuote from "../features/quotes/pages/GetQuote";
 import Contact from "../features/landing/components/Contact";
 import Products from "../features/products/pages/Products";
+import Apply from "../features/customer/pages/Apply";
 
 const publicRoutes = (
   <Route element={<PublicLayout />}>
@@ -46,6 +47,11 @@ const publicRoutes = (
       path="/get-quote"
       element={<GetQuote />}
     />
+<Route
+  path= "/apply"
+  element={<Apply />}
+  />
+    
   
   </Route>
 );
